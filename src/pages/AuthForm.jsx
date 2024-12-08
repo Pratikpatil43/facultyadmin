@@ -70,7 +70,27 @@ const AuthForm = () => {
                         />
                     </div>
                     <div className="d-grid">
-                        <button type="submit" className="btn btn-primary btn-lg">Login</button>
+                   <Button
+    variant="primary"
+    type="submit"
+    className="w-100 d-flex align-items-center justify-content-center"
+    size="lg"
+    disabled={loading}
+    style={{
+        backgroundColor: '#4c56cc',
+        border: 'none',
+        padding: '12px',
+        fontSize: '16px',
+        fontWeight: '600',
+        borderRadius: '8px'
+    }}
+>
+    {loading ? (
+        <Spinner animation="border" size="sm" />
+    ) : (
+        type === 'login' ? 'Login' : 'Register'
+    )}
+</Button>
                     </div>
                 </form>
                 
