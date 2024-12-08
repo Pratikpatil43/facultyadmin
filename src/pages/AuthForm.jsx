@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate, Link } from 'react-router-dom';
-import { Button, Form, Spinner } from 'react-bootstrap';
-
 
 const AuthForm = () => {
     const [facultyUsername, setFacultyUsername] = useState('');
@@ -72,27 +70,7 @@ const AuthForm = () => {
                         />
                     </div>
                     <div className="d-grid">
-                   <Button
-    variant="primary"
-    type="submit"
-    className="w-100 d-flex align-items-center justify-content-center"
-    size="lg"
-    disabled={loading}
-    style={{
-        backgroundColor: '#4c56cc',
-        border: 'none',
-        padding: '12px',
-        fontSize: '16px',
-        fontWeight: '600',
-        borderRadius: '8px'
-    }}
->
-    {loading ? (
-        <Spinner animation="border" size="sm" />
-    ) : (
-        type === 'login' ? 'Login' : 'Register'
-    )}
-</Button>
+                        <button type="submit" className="btn btn-primary btn-lg">Login</button>
                     </div>
                 </form>
                 
